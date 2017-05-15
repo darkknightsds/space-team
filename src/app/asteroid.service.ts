@@ -6,7 +6,7 @@ export class AsteroidService {
   asteroids: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.asteroids = database.list('near_earth_objects');
+    this.asteroids = database.list('asteroids');
    }
 
    getAsteroids() {
