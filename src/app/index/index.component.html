@@ -1,30 +1,16 @@
-<p>hey</p>
-<div *ngFor="let asteroid of asteroids | async">
+<!-- <div *ngFor="let asteroid of asteroids | async">
   {{asteroid.name}} {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}
-</div>
-<div class="row">
-  <div class="col-md-6">
-    <div style="display: block;">
-    <canvas baseChart width="400" height="400"
-                [datasets]="lineChartData"
-                [labels]="lineChartLabels"
-                [options]="lineChartOptions"
-                [colors]="lineChartColors"
-                [legend]="lineChartLegend"
-                [chartType]="lineChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
-    </div>
+</div> -->
+<div class="card blue-grey lighten-4" *ngFor="let asteroid of asteroids | async">
+  <div class="card-content black-text">
+    <span class="card-title">Name: {{asteroid.name}}</span>
+    <p>Potentially Hazardous: {{asteroid.is_potentially_hazardous_asteroid}}</p>
+    <p>Approach Date: {{asteroid.close_approach_data[0].close_approach_date}}</p>
+    <p>Relative Velocity (MpH): {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}</p>
+    <p>Estimated Diameter: {{asteroid.estimated_diameter.miles.estimated_diameter_max}}</p>
+    <p>Absolute Magnitude: {{asteroid.absolute_magnitude_h}}</p>
   </div>
-  <div class="col-md-6" style="margin-bottom: 10px">
-    <table class="table table-responsive table-condensed">
-      <tr>
-        <th *ngFor="let label of lineChartLabels">{{label}}</th>
-      </tr>
-      <tr *ngFor="let d of lineChartData">
-        <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
-      </tr>
-    </table>
-    <button (click)="randomize()">CLICK</button>
+  <div class="card-action">
+    <a href={{asteroid.nasa_jpl_url}} target="blank">Learn More About {{asteroid.name}}</a>
   </div>
 </div>
