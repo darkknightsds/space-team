@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { AsteroidDetailComponent } from './asteroid-detail/asteroid-detail.component';
 import { AboutComponent } from './about/about.component';
+import { ChartsModule } from 'ng2-charts';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +36,8 @@ export const firebaseConfig = {
     MaterializeModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
