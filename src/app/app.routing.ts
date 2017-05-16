@@ -13,7 +13,6 @@ const appRoutes: Routes = [
     path: 'timeline',
     component: TimelineComponent
   },
-  ,
   {
     path: 'celestial-mechanics',
     component: CelestialMechanicsComponent
