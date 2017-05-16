@@ -1,0 +1,10 @@
+a {
+  color: #1a237e !important;
+}
+.card {
+  width: 40%;
+  margin: 1%;
+  float: left;
+  min-height: 300px;
+  opacity: 0.9;
+}
