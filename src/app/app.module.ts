@@ -14,12 +14,11 @@ import { AboutComponent } from './about/about.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { ChartsModule } from 'ng2-charts';
 
-
 export const firebaseConfig = {
-  // apiKey: masterFirebaseConfig.apiKey,
-  // authDomain: masterFirebaseConfig.authDomain,
-  // databaseURL: masterFirebaseConfig.databaseURL,
-  // storageBucket: masterFirebaseConfig.storageBucket
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
 };
 
 @NgModule({
@@ -28,8 +27,7 @@ export const firebaseConfig = {
     IndexComponent,
     AsteroidDetailComponent,
     AboutComponent,
-    TimelineComponent,
-
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
