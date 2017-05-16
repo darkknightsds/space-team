@@ -16,10 +16,10 @@ import { ChartsModule } from 'ng2-charts';
 import { CelestialMechanicsComponent } from './celestial-mechanics/celestial-mechanics.component';
 
 export const firebaseConfig = {
-  // apiKey: masterFirebaseConfig.apiKey,
-  // authDomain: masterFirebaseConfig.authDomain,
-  // databaseURL: masterFirebaseConfig.databaseURL,
-  // storageBucket: masterFirebaseConfig.storageBucket
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
 };
 
 @NgModule({
