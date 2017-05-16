@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AsteroidService } from '../asteroid.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { ChartsModule } from 'ng2-charts';
 
 @Component({
   selector: 'app-index',
@@ -19,7 +20,7 @@ export class IndexComponent implements OnInit {
 
   // lineChart
   public lineChartData:Array<any> = [
-    {data: [65, 59, 80, 81, 56, 55, {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}], label: 'Series A'},
+    {data: [65000000, 59, 80, 81, 56, 55, 40], label: 'Series A'},
   ];
   public lineChartLabels:Array<any> = ['10,000,000', '20,000,000', '30,000,000', '40,000,000', '50,000,000', '60,000,000', '70,000,000'];
   public lineChartOptions:any = {
