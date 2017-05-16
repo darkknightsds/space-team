@@ -2,6 +2,7 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { CelestialMechanicsComponent } from './celestial-mechanics/celestial-mechanics.component';
 
 const appRoutes: Routes = [
   {
@@ -11,6 +12,11 @@ const appRoutes: Routes = [
   {
     path: 'timeline',
     component: TimelineComponent
+  },
+  ,
+  {
+    path: 'celestial-mechanics',
+    component: CelestialMechanicsComponent
   }
 ];
 
