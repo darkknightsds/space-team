@@ -9,7 +9,7 @@ const appRoutes: Routes = [
     component: IndexComponent
   },
   {
-    path: 'timeLine',
+    path: 'timeline',
     component: TimelineComponent
   }
 ];
