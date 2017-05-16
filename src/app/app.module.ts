@@ -17,10 +17,10 @@ import { CelestialMechanicsComponent } from './celestial-mechanics/celestial-mec
 import { ResourcesComponent } from './resources/resources.component';
 
 export const firebaseConfig = {
-  apiKey: masterFirebaseConfig.apiKey,
-  authDomain: masterFirebaseConfig.authDomain,
-  databaseURL: masterFirebaseConfig.databaseURL,
-  storageBucket: masterFirebaseConfig.storageBucket
+  // apiKey: masterFirebaseConfig.apiKey,
+  // authDomain: masterFirebaseConfig.authDomain,
+  // databaseURL: masterFirebaseConfig.databaseURL,
+  // storageBucket: masterFirebaseConfig.storageBucket
 };
 
 @NgModule({
