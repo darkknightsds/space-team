@@ -20,7 +20,7 @@ export class TestComponent implements OnInit {
     .map((res:Response) => res.json().near_earth_objects["2017-05-17"])
     .subscribe(data => {
       this.callData = data;
-      this.callData.forEach(n => this.callData.push(n));
+      this.callData.forEach(n => this.callData.push());
       console.log(this.callData);
     });
   }
