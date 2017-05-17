@@ -13,6 +13,19 @@ import 'rxjs/add/operator/map';
 export class IndexComponent implements OnInit {
   callData = [];
 
+  todaysDate: Date = new Date();
+
+  convertDate(date) {
+    var yyyy = date.getFullYear().toString();
+    var mm = (date.getMonth()+1).toString();
+    var dd  = date.getDate().toString();
+
+    var mmChars = mm.split('');
+    var ddChars = dd.split('');
+
+    return yyyy + '-' + (mmChars[1]?mm:"0"+mmChars[0]) + '-' + (ddChars[1]?dd:"0"+ddChars[0]);
+  }
+
   constructor(private http: Http) { }
 
   ngOnInit() {
@@ -22,6 +35,8 @@ export class IndexComponent implements OnInit {
       this.callData = data;
       this.callData.forEach(n => this.callData.push());
       console.log(this.callData);
+      console.log(this.convertDate(this.todaysDate));
     });
+
   }
 }
