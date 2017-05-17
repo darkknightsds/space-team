@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseListObservable } from 'angularfire2/database';
-import { ChartsModule } from 'ng2-charts';
+import { AsteroidService } from '../asteroid.service';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Component({
-  selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  selector: 'app-test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.css'],
+  providers: [AsteroidService]
 })
 
-export class IndexComponent implements OnInit {
+export class TestComponent implements OnInit {
   callData = [];
 
-  constructor(private http: Http) { }
+  constructor(private asteroidService: AsteroidService, private http: Http) { }
 
   ngOnInit() {
     this.http.get(`https://api.nasa.gov/neo/rest/v1/feed?start_date=2017-05-17&end_date=2017-05-17&api_key=SafUQrFLoCbNXkGFaT4xvfbWPUZSpCxcOV0G2PPI`)
@@ -24,4 +24,7 @@ export class IndexComponent implements OnInit {
       console.log(this.callData);
     });
   }
+
 }
+
+// .name, n.is_potentially_hazardous_asteroid, n.close_approach_data[0].close_approach_date, n.close_approach_data[0].relative_velocity.miles_per_hour, n.estimated_diameter.miles.estimated_diameter_max, n.absolute_magnitude_h, n.nasa_jpl_url
