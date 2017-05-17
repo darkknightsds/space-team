@@ -134,7 +134,7 @@ body {
   padding: 110px 0 2px;
 }
 .hover-fold .top {
-  height: 40%;
+  height: 50%;
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   -webkit-transition: all 0.5s ease-out;
@@ -193,10 +193,14 @@ body {
   width: 100%;
   z-index: 0;
 }
-.cards, .col-md-4{
+.cards, .col{
   margin-top: 0px !important;
   margin-bottom: 0px !important ;
 }
 .cardButtonRow{
 padding: 20px;
+}
+
+.profile {
+  padding-top: 20px;
 }
