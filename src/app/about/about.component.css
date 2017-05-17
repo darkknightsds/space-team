@@ -3,6 +3,7 @@
 body {
   padding: 20px 80px;
   background: #eee url(http://subtlepatterns.com/patterns/extra_clean_paper.png);
+  
 }
 #logo {
   font-family: 'Open Sans', sans-serif;
@@ -173,10 +174,11 @@ body {
   height: 100%;
   /*has to be 100% of .top */
   width: 100%;
-  
+
 }
 .hover-fold .back {
   background: #4e2931;
+  color: white;
   height: 100%;
   /*has to be 100% of .top */
   padding: 20px 20px;
