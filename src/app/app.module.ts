@@ -14,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { ChartsModule } from 'ng2-charts';
 import { CelestialMechanicsComponent } from './celestial-mechanics/celestial-mechanics.component';
+import { TestComponent } from './test/test.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     AsteroidDetailComponent,
     AboutComponent,
     TimelineComponent,
-    CelestialMechanicsComponent
+    CelestialMechanicsComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
