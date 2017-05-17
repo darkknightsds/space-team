@@ -12,6 +12,7 @@ import 'rxjs/add/operator/map';
 
 export class IndexComponent implements OnInit {
   callData = [];
+  apiDate;
 
   todaysDate: Date = new Date();
 
@@ -29,13 +30,12 @@ export class IndexComponent implements OnInit {
   constructor(private http: Http) { }
 
   ngOnInit() {
-    this.http.get(`https://api.nasa.gov/neo/rest/v1/feed?start_date=2017-05-17&end_date=2017-05-17&api_key=SafUQrFLoCbNXkGFaT4xvfbWPUZSpCxcOV0G2PPI`)
-    .map((res:Response) => res.json().near_earth_objects["2017-05-17"])
+    this.apiDate = this.convertDate(this.todaysDate);
+    this.http.get("https://api.nasa.gov/neo/rest/v1/feed?start_date=" + this.apiDate + "&end_date=" + this.apiDate + "&api_key=SafUQrFLoCbNXkGFaT4xvfbWPUZSpCxcOV0G2PPI")
+    .map((res:Response) => res.json().near_earth_objects[this.apiDate])
     .subscribe(data => {
       this.callData = data;
       this.callData.forEach(n => this.callData.push());
-      console.log(this.callData);
-      console.log(this.convertDate(this.todaysDate));
     });
 
   }
