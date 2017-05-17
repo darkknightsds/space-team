@@ -1,50 +1,53 @@
-<!-- <div *ngFor="let asteroid of asteroids | async">
-  {{asteroid.name}} {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}
-</div> -->
-<!-- <div class="container"> -->
-  <div class="row">
-    <div class="col s10 offset-s2">
+<div class="row">
+  <div class="col s10 offset-s2">
 
-      <div class="card blue-grey lighten-4" *ngFor="let asteroid of asteroids | async">
+    <div class="card blue-grey lighten-4" *ngFor="let asteroid of callData">
 
-        <div *ngIf="asteroid.is_potentially_hazardous_asteroid == true">
-          <div id="hazardous-true">
-            <div class="card-content black-text">
-              <span class="card-title">Name: {{asteroid.name}}</span>
-              <p>Potentially Hazardous: {{asteroid.is_potentially_hazardous_asteroid}}</p>
-              <p>Approach Date: {{asteroid.close_approach_data[0].close_approach_date}}</p>
-              <p>Relative Velocity (MpH): {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}</p>
-              <p>Estimated Diameter: {{asteroid.estimated_diameter.miles.estimated_diameter_max}}</p>
-              <p>Absolute Magnitude: {{asteroid.absolute_magnitude_h}}</p>
-            </div>
-            <div class="card-action">
-              <a href={{asteroid.nasa_jpl_url}} target="blank">Learn More About {{asteroid.name}}</a>
-            </div>
-            <br>
-            <br>
+      <div *ngIf="asteroid.is_potentially_hazardous_asteroid == true">
+        <div id="hazardous-true">
+          <div class="card-content black-text">
+            <span class="card-title">Name: {{asteroid.name}}</span>
+            <p><span class="custom-font">Potentially Hazardous: </span> {{asteroid.is_potentially_hazardous_asteroid}}</p>
+            <p><span class="custom-font">Approach Date: </span> {{asteroid.close_approach_data[0].close_approach_date}}</p>
+            <p><span class="custom-font">Relative Velocity (MpH): </span> {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}</p>
+            <p><span class="custom-font">Estimated Diameter: </span> {{asteroid.estimated_diameter.miles.estimated_diameter_max}}</p>
+            <p><span class="custom-font">Absolute Magnitude: </span>{{asteroid.absolute_magnitude_h}}</p>
           </div>
-        </div>
-
-        <div *ngIf="asteroid.is_potentially_hazardous_asteroid == false">
-          <div id="hazardous-false">
-            <div class="card-content black-text">
-              <span class="card-title">Name: {{asteroid.name}}</span>
-              <p>Potentially Hazardous: {{asteroid.is_potentially_hazardous_asteroid}}</p>
-              <p>Approach Date: {{asteroid.close_approach_data[0].close_approach_date}}</p>
-              <p>Relative Velocity (MpH): {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}</p>
-              <p>Estimated Diameter: {{asteroid.estimated_diameter.miles.estimated_diameter_max}}</p>
-              <p>Absolute Magnitude: {{asteroid.absolute_magnitude_h}}</p>
-            </div>
-            <div class="card-action">
-              <a href={{asteroid.nasa_jpl_url}} target="blank">Learn More About {{asteroid.name}}</a>
-            </div>
-            <br>
-            <br>
+          <div class="card-action">
+            <!-- <a href={{asteroid.nasa_jpl_url}} target="blank"> -->
+              <p>Learn More About {{asteroid.name}}</p>
+            <!-- </a> -->
+            <a href={{asteroid.nasa_jpl_url}} target="blank" class="left btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
           </div>
+          <br>
+          <br>
+          <br>
         </div>
+      </div>
 
+      <div *ngIf="asteroid.is_potentially_hazardous_asteroid == false">
+        <div id="hazardous-false">
+          <div class="card-content black-text">
+            <span class="card-title">Name: {{asteroid.name}}</span>
+            <p><span class="custom-font">Potentially Hazardous: </span> {{asteroid.is_potentially_hazardous_asteroid}}</p>
+            <p><span class="custom-font">Approach Date: </span> {{asteroid.close_approach_data[0].close_approach_date}}</p>
+            <p><span class="custom-font">Relative Velocity (MpH): </span> {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}</p>
+            <p><span class="custom-font">Estimated Diameter: </span> {{asteroid.estimated_diameter.miles.estimated_diameter_max}}</p>
+            <p><span class="custom-font">Absolute Magnitude: </span>{{asteroid.absolute_magnitude_h}}</p>
+          </div>
+          <div class="card-action">
+            <!-- <a href={{asteroid.nasa_jpl_url}} target="blank"> -->
+              <p>Learn More About {{asteroid.name}}</p>
+            <!-- </a> -->
+            <a href={{asteroid.nasa_jpl_url}} target="blank" class="left btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+          <br>
+          <br>
+          <br>
+        </div>
       </div>
 
     </div>
+
   </div>
-<!-- </div> -->
+</div>
