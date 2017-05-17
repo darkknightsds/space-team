@@ -8,3 +8,9 @@ a {
   min-height: 300px;
   opacity: 0.9;
 }
+#hazardous-true{
+  background-color: yellow;
+}
+#hazardous-false{
+  background-color: green;
+}
