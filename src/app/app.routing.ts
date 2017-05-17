@@ -4,6 +4,7 @@ import { IndexComponent } from './index/index.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { CelestialMechanicsComponent } from './celestial-mechanics/celestial-mechanics.component';
 import { AboutComponent } from './about/about.component';
+import { TestComponent } from './test/test.component';
 import { ResourcesComponent } from './resources/resources.component';
 
 const appRoutes: Routes = [
@@ -22,6 +23,10 @@ const appRoutes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'test',
+    component: TestComponent
   },
   {
     path: 'resources',
