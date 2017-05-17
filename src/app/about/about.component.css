@@ -128,7 +128,7 @@ body {
   position: relative;
   width: 390px;
 }
-.hover-fold h2 {
+.hover-fold h4 {
   /*border-bottom: 1px solid #333;*/
   /*margin: 0 40px;*/
   padding: 110px 0 2px;
@@ -166,14 +166,17 @@ body {
   -ms-transform: rotateX(-180deg);
   -webkit-transform: rotateX(-180deg);
   transform: rotateX(-180deg);
+  background: #4e2931;
+
 }
 .hover-fold .front {
   height: 100%;
   /*has to be 100% of .top */
   width: 100%;
+  
 }
 .hover-fold .back {
-  background: white;
+  background: #4e2931;
   height: 100%;
   /*has to be 100% of .top */
   padding: 20px 20px;
@@ -203,4 +206,5 @@ padding: 20px;
 
 .profile {
   padding-top: 20px;
+
 }
