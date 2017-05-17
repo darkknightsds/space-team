@@ -6,7 +6,6 @@ import { CelestialMechanicsComponent } from './celestial-mechanics/celestial-mec
 import { AboutComponent } from './about/about.component';
 import { TestComponent } from './test/test.component';
 import { ResourcesComponent } from './resources/resources.component';
-
 const appRoutes: Routes = [
   {
     path: '',
