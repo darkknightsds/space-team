@@ -19,8 +19,8 @@ export class TestComponent implements OnInit {
     .map((res:Response) => res.json().near_earth_objects["2017-05-17"])
     .subscribe(data => {
       this.callData = data;
-      this.callData.forEach(n => console.log(n.name));
-  });
+      this.callData.forEach(n => console.log(n.name, n.is_potentially_hazardous_asteroid, n.close_approach_data[0].close_approach_date, n.close_approach_data[0].relative_velocity.miles_per_hour, n.estimated_diameter.miles.estimated_diameter_max, n.absolute_magnitude_h, n.nasa_jpl_url));
+    });
+  }
 
-}
 }
