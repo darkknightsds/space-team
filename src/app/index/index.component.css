@@ -9,8 +9,8 @@ a {
   opacity: 0.9;
 }
 #hazardous-true{
-  background-color: yellow;
+  background-color: #ecf401;
 }
 #hazardous-false{
-  background-color: green;
+  background-color: #00c000;
 }
