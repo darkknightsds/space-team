@@ -3,7 +3,7 @@
 body {
   padding: 20px 80px;
   background: #eee url(http://subtlepatterns.com/patterns/extra_clean_paper.png);
-  
+
 }
 #logo {
   font-family: 'Open Sans', sans-serif;
@@ -210,3 +210,11 @@ padding: 20px;
   padding-top: 20px;
 
 }
+ #about-us {
+   color: #ffffff;
+ }
+ a {
+   color: yellow;
+   hover: yellow;
+   clicked: yellow;
+ }
