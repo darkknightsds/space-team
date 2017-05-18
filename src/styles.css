@@ -14,3 +14,7 @@ body{
 main {
   flex: 1 0 auto;
 }
+
+a:hover {
+  color: yellow;
+}
