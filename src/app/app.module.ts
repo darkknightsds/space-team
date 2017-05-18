@@ -24,7 +24,6 @@ import { ResourcesComponent } from './resources/resources.component';
     HttpModule,
     MaterializeModule,
     routing,
-    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
