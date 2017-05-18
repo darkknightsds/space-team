@@ -68,7 +68,7 @@
 
 _Using NASA's Near Earth Object Api, we at Space-Team-Besties have built an application that tracks the small dangerous celestial objects near earth for the current day. You will first arrive at the home page and see a series of 'cards', that each contain information for a single near earth object._
 
-_Properties of these objects include: Whether or not they are potentially hazardous, their Approach Date, their Relative Velocity in Miles Per Hour, their estimated diameter, and their Absolute Magnitude (a measurement of true brightness, primarily determined by its size, and by its temperature)._
+_Properties of these objects include: Whether or not they are potentially hazardous, their Approach Date, their Relative Velocity in Miles Per Hour, their Estimated Diameter in Miles, and their Absolute Magnitude (a measurement of true brightness, primarily determined by its size, and by its temperature)._
 
 _You will also notice that each card has a high contrast background color that quickly tells you whether or not the objects are potentially hazardous. Green means your safe, Yellow means you should look more closely! A link is also provided if you would like to gather more specific information from NASA.gov_
 
@@ -79,7 +79,7 @@ _You will also notice that each card has a high contrast background color that q
 _Lastly, on the Nav Bar at the top of the page, there is a link to a page of Resources for those inclined, and an About page, if you like to get to know our team!_
 
 <p align="center">
-  <img src="./src/assets/images/navbar-screenshot.png"/>
+  <img src="./src/assets/images/navbar-screenshot2.png"/>
 </p>
 
 ## Setup/Installation Requirements
