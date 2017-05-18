@@ -123,4 +123,4 @@ _If you have issues, questions, ideas or concerns, please contact us at email@em
 
 ### License
 
-Copyright (c) 2017 **_Evan Bishop_**
+Copyright (c) 2017 **_Shane Stafford, Christian Martinez, Andy Malkin, Jahan Walsh & Evan Bishop_**
