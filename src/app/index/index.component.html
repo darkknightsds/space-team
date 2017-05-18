@@ -1,5 +1,5 @@
 <div class="container intro">
-  <h1>Incoming Asteroids Tracker</h1>
+  <h1>Flaming Space Rocks Tracker</h1>
   <h2>Utilizing the NeoWs (Near Earth Object Web Service) API from NASA</h2>
   <p>Below you can see real time data on asteroids that are passing by earth on this date. Potentially hazardous asteroids are marked. For more information on asteroids and astronomy, check out the the timeline and resources pages.</p>
 </div>
@@ -18,6 +18,7 @@
             <p><span class="custom-font">Relative Velocity (MpH): </span> {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}</p>
             <p><span class="custom-font">Estimated Diameter: </span> {{asteroid.estimated_diameter.miles.estimated_diameter_max}}</p>
             <p><span class="custom-font">Absolute Magnitude: </span>{{asteroid.absolute_magnitude_h}}</p>
+            <p><span class="custom-font">Astronomical Miss Distance: </span>{{asteroid.close_approach_data[0].miss_distance.astronomical}}</p>
           </div>
           <div class="card-action">
             <!-- <a href={{asteroid.nasa_jpl_url}} target="blank"> -->
@@ -40,6 +41,7 @@
             <p><span class="custom-font">Relative Velocity (MpH): </span> {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}</p>
             <p><span class="custom-font">Estimated Diameter: </span> {{asteroid.estimated_diameter.miles.estimated_diameter_max}}</p>
             <p><span class="custom-font">Absolute Magnitude: </span>{{asteroid.absolute_magnitude_h}}</p>
+            <p><span class="custom-font">Astronomical Miss Distance: </span>{{asteroid.close_approach_data[0].miss_distance.astronomical}}</p>
           </div>
           <div class="card-action">
             <!-- <a href={{asteroid.nasa_jpl_url}} target="blank"> -->
