@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ChartsModule } from 'ng2-charts';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 
