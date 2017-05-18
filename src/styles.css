@@ -1,5 +1,8 @@
 body{
   background-image: url(http://wallpapercave.com/wp/JzfvVHJ.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .custom-font{
   font-weight: bold;
