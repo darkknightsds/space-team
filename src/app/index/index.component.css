@@ -18,3 +18,6 @@ a {
   box-shadow: 10px 10px 5px black;
   z-index:1;
 }
+.intro {
+  color: #ffffff !important;
+}
