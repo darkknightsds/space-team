@@ -23,7 +23,7 @@ import { ResourcesComponent } from './resources/resources.component';
     FormsModule,
     HttpModule,
     MaterializeModule,
-    routing,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
