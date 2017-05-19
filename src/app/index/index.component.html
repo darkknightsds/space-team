@@ -1,62 +1,57 @@
 <div id="main-wrapper">
-<div class="container intro">
-  <h1>Flaming Space Rocks Tracker</h1>
-  <h2>Utilizing the NeoWs (Near Earth Object Web Service) API from NASA</h2>
-  <p>Below you can see real time data on asteroids that are passing by earth on this date based on astronomical units. Astronomical distance is the mean distance from the center of the earth to the center of the sun. Potentially hazardous asteroids are marked. For more information on asteroids and astronomy, check out the the timeline and resources pages.</p>
-</div>
-
-<div class="row">
-  <div class="col s10 offset-s2">
-
-    <div class="card hoverable blue-grey lighten-4" *ngFor="let asteroid of callData">
-
-      <div *ngIf="asteroid.is_potentially_hazardous_asteroid == true">
-        <div id="hazardous-true">
-          <div class="card-content black-text">
-            <span class="card-title">Name: {{asteroid.name}}</span>
-            <p><span class="custom-font">Potentially Hazardous: </span> {{asteroid.is_potentially_hazardous_asteroid}}</p>
-            <p><span class="custom-font">Approach Date: </span> {{asteroid.close_approach_data[0].close_approach_date}}</p>
-            <p><span class="custom-font">Relative Velocity (MpH): </span> {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}</p>
-            <p><span class="custom-font">Estimated Diameter: </span> {{asteroid.estimated_diameter.miles.estimated_diameter_max}}</p>
-            <p><span class="custom-font">Absolute Magnitude: </span>{{asteroid.absolute_magnitude_h}}</p>
-            <p><span class="custom-font">Astronomical Miss Distance: </span>{{asteroid.close_approach_data[0].miss_distance.astronomical}}</p>
-          </div>
-          <div class="card-action">
-            <!-- <a href={{asteroid.nasa_jpl_url}} target="blank"> -->
-              <p>Learn More About {{asteroid.name}}</p>
-            <!-- </a> -->
-            <a href={{asteroid.nasa_jpl_url}} target="blank" class="pulse left btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-          </div>
-          <br>
-          <br>
-          <br>
-        </div>
-      </div>
-
-      <div *ngIf="asteroid.is_potentially_hazardous_asteroid == false">
-        <div id="hazardous-false">
-          <div class="card-content black-text">
-            <span class="card-title">Name: {{asteroid.name}}</span>
-            <p><span class="custom-font">Potentially Hazardous: </span> {{asteroid.is_potentially_hazardous_asteroid}}</p>
-            <p><span class="custom-font">Approach Date: </span> {{asteroid.close_approach_data[0].close_approach_date}}</p>
-            <p><span class="custom-font">Relative Velocity (MpH): </span> {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}</p>
-            <p><span class="custom-font">Estimated Diameter: </span> {{asteroid.estimated_diameter.miles.estimated_diameter_max}}</p>
-            <p><span class="custom-font">Absolute Magnitude: </span>{{asteroid.absolute_magnitude_h}}</p>
-            <p><span class="custom-font">Astronomical Miss Distance: </span>{{asteroid.close_approach_data[0].miss_distance.astronomical}}</p>
-          </div>
-          <div class="card-action">
-            <!-- <a href={{asteroid.nasa_jpl_url}} target="blank"> -->
-              <p>Learn More About {{asteroid.name}}</p>
-            <!-- </a> -->
-            <a href={{asteroid.nasa_jpl_url}} target="blank" class="pulse left btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-          </div>
-          <br>
-          <br>
-          <br>
-        </div>
-      </div>
-
-    </div>
+  <div class="container intro">
+    <h1>Flaming Space Rocks Tracker</h1>
+    <h2>Utilizing the NeoWs (Near Earth Object Web Service) API from NASA</h2>
+    <p>Below you can see real time data on asteroids that are passing by earth on this date based on astronomical units. Astronomical distance is the mean distance from the center of the earth to the center of the sun. Potentially hazardous asteroids are marked. For more information on asteroids and astronomy, check out the the timeline and resources pages.</p>
   </div>
+
+  <div class="row">
+    <div class="col s10 offset-s2">
+
+      <div class="card hoverable blue-grey lighten-4" *ngFor="let asteroid of callData">
+
+        <div *ngIf="asteroid.is_potentially_hazardous_asteroid == true">
+          <div id="hazardous-true">
+            <div class="card-content black-text">
+              <span class="card-title">Name: {{asteroid.name}}</span>
+              <p><span class="custom-font">Potentially Hazardous Asteroid? </span> {{asteroid.is_potentially_hazardous_asteroid}}</p>
+              <p><span class="custom-font">Approach Date: </span> {{asteroid.close_approach_data[0].close_approach_date}}</p>
+              <p><span class="custom-font">Relative Velocity (MpH): </span> {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}</p>
+              <p><span class="custom-font">Estimated Diameter (Miles): </span> {{asteroid.estimated_diameter.miles.estimated_diameter_max}}</p>
+              <p><span class="custom-font">Absolute Magnitude: </span>{{asteroid.absolute_magnitude_h}}</p>
+              <p><span class="custom-font">Astronomical Miss Distance: </span>{{asteroid.close_approach_data[0].miss_distance.astronomical}}</p>
+            </div>
+            <div class="card-action">
+              <p>Learn More About {{asteroid.name}}</p>
+              <a href={{asteroid.nasa_jpl_url}} target="blank" class="pulse left btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+
+        <div *ngIf="asteroid.is_potentially_hazardous_asteroid == false">
+          <div id="hazardous-false">
+            <div class="card-content black-text">
+              <span class="card-title">Name: {{asteroid.name}}</span>
+              <p><span class="custom-font">Potentially Hazardous Asteroid? </span> {{asteroid.is_potentially_hazardous_asteroid}}</p>
+              <p><span class="custom-font">Approach Date: </span> {{asteroid.close_approach_data[0].close_approach_date}}</p>
+              <p><span class="custom-font">Relative Velocity (MpH): </span> {{asteroid.close_approach_data[0].relative_velocity.miles_per_hour}}</p>
+              <p><span class="custom-font">Estimated Diameter (Miles): </span> {{asteroid.estimated_diameter.miles.estimated_diameter_max}}</p>
+              <p><span class="custom-font">Absolute Magnitude: </span>{{asteroid.absolute_magnitude_h}}</p>
+              <p><span class="custom-font">Astronomical Miss Distance: </span>{{asteroid.close_approach_data[0].miss_distance.astronomical}}</p>
+            </div>
+            <div class="card-action">
+              <p>Learn More About {{asteroid.name}}</p>
+              <a href={{asteroid.nasa_jpl_url}} target="blank" class="pulse left btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
